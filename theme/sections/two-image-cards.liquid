@@ -1,0 +1,113 @@
+{% schema %}
+{
+  "name": "Two Image Cards",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "left_background_image",
+      "label": "Left Card Background Image"
+    },
+    {
+      "type": "text",
+      "id": "left_heading",
+      "label": "Left Card Heading"
+    },
+    {
+      "type": "textarea",
+      "id": "left_content",
+      "label": "Left Card Content"
+    },
+     {
+      "type": "text",
+      "id": "left_link_1_title",
+      "label": "Left Card Link 1 Title"
+    },
+    {
+      "type": "url",
+      "id": "left_link_1_url",
+      "label": "Left Card Link 1 URL"
+    },
+    {
+      "type": "text",
+      "id": "left_link_2_title",
+      "label": "Left Card Link 2 Title"
+    },
+    {
+      "type": "url",
+      "id": "left_link_2_url",
+      "label": "Left Card Link 2 URL"
+    },
+    {
+      "type": "text",
+      "id": "left_link_3_title",
+      "label": "Left Card Link 3 Title"
+    },
+    {
+      "type": "url",
+      "id": "left_link_3_url",
+      "label": "Left Card Link 3 URL"
+    },
+    {
+      "type": "text",
+      "id": "left_link_4_title",
+      "label": "Left Card Link 4 Title"
+    },
+    {
+      "type": "url",
+      "id": "left_link_4_url",
+      "label": "Left Card Link 4 URL"
+    },
+    {
+      "type": "image_picker",
+      "id": "right_background_image",
+      "label": "Right Card Background Image"
+    },
+    {
+      "type": "text",
+      "id": "right_heading",
+      "label": "Right Card Heading"
+    },
+    {
+      "type": "textarea",
+      "id": "right_content",
+      "label": "Right Card Content"
+    },
+     {
+      "type": "text",
+      "id": "right_link_title",
+      "label": "Right Card Link Title"
+    },
+    {
+      "type": "url",
+      "id": "right_link_url",
+      "label": "Right Card Link URL"
+    }
+  ]
+}
+{% endschema %}
+
+<section class="two-image-cards">
+  <div class="card left-card">
+    <div class="background-image" style="background-image: url('{{ section.settings.left_background_image | image_url }}');"></div>
+    <div class="content">
+      <h2>{{ section.settings.left_heading }}</h2>
+      <p>{{ section.settings.left_content }}</p>
+      <div class="links">
+        <a href="{{ section.settings.left_link_1_url }}">{{ section.settings.left_link_1_title }}</a> |
+        <a href="{{ section.settings.left_link_2_url }}">{{ section.settings.left_link_2_title }}</a> |
+        <a href="{{ section.settings.left_link_3_url }}">{{ section.settings.left_link_3_title }}</a> |
+        <a href="{{ section.settings.left_link_4_url }}">{{ section.settings.left_link_4_title }}</a>
+      </div>
+    </div>
+  </div>
+  <div class="card right-card">
+    <div class="background-image" style="background-image: url('{{ section.settings.right_background_image | image_url }}');"></div>
+    <div class="content">
+      <h2>{{ section.settings.right_heading }}</h2>
+      <p>{{ section.settings.right_content }}</p>
+      <div class="links">
+        <a href="{{ section.settings.right_link_url }}">{{ section.settings.right_link_title }}</a>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,48 @@
+{% schema %}
+  {
+    "name": "Header",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "logo_image",
+        "label": "Logo Image"
+      }
+    ]
+  }
+{% endschema %}
+
+
+<header class="site-header">
+  <div class="container">
+    <div class="site-branding">
+      <a href="{{ shop.url }}" title="{{ shop.name }}">
+        <img src="{{ section.settings.logo_image | image_url }}" alt="Logo Image" aria-label="Homepage" width="180" height="40">
+      </a>
+    </div>
+    <nav class="site-navigation">
+      <ul class="main-menu">
+        {% for link in linklists.main-menu.links -%}
+          <li>{{ link.title | link_to: link.url }}</li>
+        {%- endfor %}
+      </ul>
+    </nav>
+    <div class="header-actions">
+      <form action="/search" method="get" class="search-form">
+        <label for="search-input" class="visually-hidden">Search:</label>
+        <input type="text" name="q" placeholder="Search">
+        <button type="submit" class="search-icon">
+          <img src="{{ 'search-icon.png' | asset_url }}" alt="Search" aria-label="Search" width="15" height="15" />
+        </button>
+      </form>
+    
+        <div class="my-account">
+          <span>My Account</span>
+          <a href="/account/login" class="login-link">Sign in or Sign up</a>
+        </div>
+    
+      <a href="/cart" class="cart-link"><img src="{{ 'cart-icon.png' | asset_url }}" alt="cart-icon" aria-label="Cart" width="35" height="35" />
+        <!-- <span class="cart-count">{{ cart.item_count }}</span> -->
+      </a>
+    </div>
+  </div>
+</header>

@@ -1,0 +1,393 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+}
+
+section {
+  margin-bottom: 60px;
+}
+
+h1 {
+  font-size: 80px;
+}
+
+h3 {
+  font-size: 42px;
+}
+
+h4 {
+  font-size: 20px;
+}
+
+h6 {
+  font-size: 14px;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+a.button {
+  background-color: black;
+  color: white;
+  padding: 15px 0;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 5px; 
+}
+
+.shipping-banner {
+  background-color: #005BC4;
+;
+  height: 50px;
+  text-transform: uppercase;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.site-header .container {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 50px;
+}
+
+.site-header .site-navigation {
+  flex: 0 0 30%;
+}
+
+.site-header .main-menu {
+  display: flex;
+  justify-content: space-around;
+  text-transform: uppercase;
+  list-style-type: none;
+}
+
+.site-header .main-menu a { 
+  text-decoration: none;
+  color: black;
+  letter-spacing: 2px;
+  font-weight: 700;
+  font-size: 14px;
+
+  &:hover {
+    color: gray;
+  }
+}
+
+.site-header .header-actions {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  flex: 0 0 50%;
+  justify-content: flex-end;
+}
+.search-form {
+  position: relative;
+  margin: 0;
+}
+
+.search-form input {
+  border: 1px solid #C4C4C4;
+  padding: 10px 20px;
+  border-radius: 30px;
+  height: 35px;
+}
+
+.search-form input[type="text"] {
+  padding-right: 30px;
+}
+
+.search-icon {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.site-header .my-account {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-right: 15px;
+  border-right: 1px solid #C4C4C4;
+}
+
+.site-header .cart-link {
+  padding-left: 15px;
+}
+
+.site-header .cart-link a {
+  margin-top: 5px;
+}
+
+.site-header .login-link {
+  margin-top: 5px;
+  color: black;
+}
+
+.hero {
+  
+}
+
+.hero .hero-background {
+  position: relative;
+  height: 650px;
+  background-size: cover;
+  background-position: center;
+}
+
+.hero .hero-content {
+  width: 50%;
+  /* height: 100%; */
+  text-align: center;
+  padding: 5%;
+  max-width: 800px;
+}
+
+.hero .button-links {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.hero .button-links a {
+  flex: 0 0 23%;
+}
+
+.hero .hero-content h4 {
+  text-transform: uppercase;
+}
+
+.hero .hero-content h1 {
+  text-transform: uppercase;
+}
+
+.image-card-overlap {
+  display: flex;
+  height: 650px;
+}
+
+.image-card-overlap .background-image {
+  width: 66.666%;
+  background-size: cover;
+  background-position: center;
+}
+
+.image-card-overlap .content {
+  width: 33.333%;
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 50px;
+  box-sizing: border-box;
+  position: relative;
+}
+
+ .image-card-overlap .white-box {
+    position: absolute;
+    padding: 20px;
+    right: -200px;
+    background-color: white;
+    width: 100%;
+    height: 350px;
+}
+
+.image-card-overlap .gray-border-box {
+  border: 2px solid #ECECEC;
+  height: 300px;
+  padding: 20px 10%;
+}
+
+.image-card-overlap .white-box h3 {
+  margin-bottom: 20px;
+}
+
+.image-card-overlap .white-box p {
+  margin-bottom: 40px;
+}
+
+.image-card-overlap .button {
+  padding: 10px 20px;
+  margin-top: 30px;
+}
+
+.two-image-cards {
+  height: 650px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.two-image-cards .card {
+  flex: 0 0 50%;
+  position: relative;
+}
+.two-image-cards .card h2 {
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 28px;
+}
+
+.two-image-cards .content {
+  text-align: center;
+  position: absolute;
+  background-color: white;
+  bottom: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 70%;
+  padding: 20px 30px;
+  20px 30px 40px;
+  
+}
+
+.two-image-cards .background-image {
+  min-height: 300px;
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+}
+
+.two-image-cards .links {
+  display: flex;
+  justify-content: space-evenly;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.two-image-cards .links a {
+  color: black;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.icon-repeater {
+  height: 250px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f0f0f0;
+  padding: 20px;
+}
+
+.icon-repeater .icon {
+  text-align: center;
+  flex: 1;
+  margin: 0 10px;
+}
+
+.icon-repeater .icon img {
+  width: 100px;
+  height: auto;
+}
+
+@media (max-width: 1000px) {
+  h1 {
+    font-size: 36px;
+  }
+  
+  h3 {
+    font-size: 42px;
+  }
+  
+  h4 {
+    font-size: 14px;
+  }
+
+  .hero {
+    height: 600px;
+  }
+
+  .hero .button-links {
+    gap: 15px;
+  }
+
+  .hero .button-links a {
+    flex: 0 0 46%;
+  }
+  
+  .hero .hero-content {
+    background-color: white;
+    position: absolute;
+    width: 85%;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -180px;
+    z-index: 1;
+    height: auto;
+    border: 2px solid #D8D8D8;
+  }
+
+  .hero .hero-background {
+    height: 300px;
+  }
+
+  .image-card-overlap {
+    flex-direction: column;
+  }
+
+  .image-card-overlap .content {
+    width: 100%;
+    order: 2;
+    padding-bottom: 50px;
+  }
+
+  .image-card-overlap .background-image {
+    width: 100%;
+    height: 300px;
+  }
+
+  .image-card-overlap .white-box {
+    right: 0;
+    width: 85%;
+    left: 0;
+  }
+
+  .two-image-cards {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .two-image-cards .content {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    padding-bottom: 50px;
+  }
+
+  .two-image-cards .background-image {
+    height: 320px;
+  }
+
+  .two-image-cards .card {
+    flex: 0 0 100%;
+    width: 100%;
+  }
+
+  .site-header .my-account, .search-form, .site-header .site-navigation {
+    display: none;
+  }
+  
+  .icon-repeater {
+    flex-direction: column;
+    height: auto;
+  }
+}
+
